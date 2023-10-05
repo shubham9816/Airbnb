@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="listing.css">
+
+    
+</head>
+<body id="listingPage">
+   <header>
+    <nav id="navBar" class="navbar-white">
+        <a href="index.html">
+            <img src="images/Vector-pink.png" class="logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Places to stay</a></li>
+            <li><a href="#">Experiences</a></li>
+            <li><a href="listing.html">Online Experiences</a></li>
+        </ul>
+        <div class="right-nav">
+            <a href="#" class="host-white host">Become a Host</a>
+            <img src="images/globe-black.png" alt="" srcset="">
+            <div class="profile-white profile">
+              <img src="images/menu (1).png" alt="" srcset="">
+              <img src="images/Avatar Base.png" alt="" srcset="">
+            </div>
+          </div>
+    </nav>
+   </header>
+<div class="container">
+
+    <div class="list-container">
+        <div class="left-col">
+            <p id="resultsCount">200+ Stays in San Fran</p>
+            <div id="resultsContainer"></div>
+        </div>
+        <div class="right-col">
+            <!--iframe src="https://maps.google.com/maps?q=${latitude}, ${longitude}&output=embed" 
+            width="100%" 
+            height="600" 
+            frameborder="0" 
+            style="border:0">
+         </iframe-->
+         <div id="map" style="height: 600px; width: 100%;"></div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <img src="images/arrow.png">
+        <span class="current">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>&middot; &middot; &middot; &middot;</span>
+        <span>20</span>
+        <img src="images/arrow.png" class="right-arrow">
+    </div>
+</div>
+<footer>
+    <div class="footer-div">
+        <ul>
+            <p>Support</p>
+            <li>Help Center</li>
+            <li>Safety information</li>
+            <li>Cancellation options</li>
+            <li>Our COVID-19 Response</li>
+            <li>Supporting people with disabilities</li>
+            <li>Report a neighborhoood concern</li>
+        </ul>
+        <ul>
+            <p>Community</p>
+            <li>Airbnb.org: disaster relief housing</li>
+            <li>Support: Afghan refugees</li>
+            <li>Celebrating diversity & belonging</li>
+            <li>Combating discriminatino</li>
+        </ul>
+        <ul>
+            <p>Hosting</p>
+            <li>Try hosting</li>
+            <li>AirCover: protection for Hosts</li>
+            <li>Explore hosting resources</li>
+            <li>Visit our community forum</li>
+            <li>How to host responsibly</li>
+        </ul>
+        <ul>
+            <p>About</p>
+            <li>Newsroom</li>
+            <li>Learn about new features</li>
+            <li>Letter from our founders</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>Airbnb Luxe</li>
+        </ul>
+    </div>
+    <div class="sponser">
+        <img src="images/Kicker.png" alt="">
+    </div>
+    
+</footer>
+<script src="script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAGf3lR7DLR8vMJIeknZjPX30VWB-XhFI&callback=initMap"></script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="navBar">
+            <a href="index.html">
+                <img src="images/Vector.png" class="logo">
+            </a>
+              <ul class="nav-links">
+                  <li><a href="#" class="active">Places to stay</a></li>
+                  <li><a href="#">Experiences</a></li>
+                  <li><a href="listing.html">Online Experiences</a></li>
+              </ul>
+              <div class="right-nav">
+                <a href="#" class="host">Become a Host</a>
+                <img src="images/globe.png" alt="" srcset="">
+                <div class="profile">
+                  <img src="images/menu (1).png" alt="" srcset="">
+                  <img src="images/Avatar Base.png" alt="" srcset="">
+                </div>
+              </div>
+          </nav>
+    </header>
+    <main>
+        <!-- Search bar, listings, and map will go here -->
+        <div class="container1">
+            <div class="search-bar">
+                <form>
+                    <div class="location-input">
+                        <label>Location</label>
+                        <input type="text" id="searchInput" placeholder="Where are you going?">
+                    </div>
+                    <div>
+                      <label>Check in</label>
+                      <input type="date" id="checkinDate" placeholder="Add Date">
+                  </div>
+                  <div>
+                      <label>Check out</label>
+                      <input type="date" id="checkoutDate" placeholder="Add Date">
+                  </div>
+                  <div>
+                    <div id="guestDropdown" class="hidden">
+                        <div>
+                            <span>Adults:</span>
+                            <button type="button" onclick="decrementGuest(event, 'adultCount')">-</button>
+                            <span id="adultCount">0</span>
+                            <button type="button" onclick="incrementGuest(event, 'adultCount')">+</button>
+
+                        </div>
+                        <div>
+                            <span>Children:</span>
+                            <button type="button" onclick="decrementGuest(event,'childrenCount')">-</button>
+                            <span id="childrenCount">0</span>
+                            <button type="button" onclick="incrementGuest(event, 'childrenCount')">+</button>
+                        </div>
+                        <div>
+                            
+                            <span>Infants:</span>
+                            <button type="button" onclick="decrementGuest(event,'infantCount')">-</button>
+                            <span id="infantCount">0</span>
+                            <button type="button" onclick="incrementGuest(event, 'infantCount')">+</button>
+
+                        </div>
+                        <div>
+                            <span>Pets:</span>
+                            <button type="button" onclick="decrementGuest(event,'petCount')">-</button>
+                            <span id="petCount">0</span>
+                            <button type="button" onclick="incrementGuest(event, 'petCount')">+</button>
+
+                        </div>
+                    </div>
+                      <label>Guest</label>
+                      <input type="text" id="guestSelector" onclick="toggleGuestDropdown()" readonly value="Add Guests"/>
+                  </div>
+
+                  <button id="searchButton" type="submit"><img src="images/search.png"></button>
+                </form>
+            </div>
+            <div class="big-card">
+              <h2>Not sure where to go? Perfect.</h2>
+              <button>I’m flexible</button>
+            </div>
+        </div>
+        <section class="inspiration">
+            <h1>Inspiration for your next trip</h1>
+            <div class="inspiration-card-container">
+                <div id="inspiration-card">
+                    <img src="images/Rectangle 1.png" alt="">
+                    <p>Nashville</p>
+                    <p>53 miles away</p>
+                </div>
+                <div id="inspiration-card">
+                    <img src="images/Rectangle 1.png" alt="">
+                    <p>Nashville</p>
+                    <p>53 miles away</p>
+                </div>
+                <div id="inspiration-card">
+                    <img src="images/Rectangle 1.png" alt="">
+                    <p>Nashville</p>
+                    <p>53 miles away</p>
+                </div>
+                <div id="inspiration-card">
+                    <img src="images/Rectangle 1.png" alt="">
+                    <p>Nashville</p>
+                    <p>53 miles away</p>
+                </div>
+            </div>
+            
+        </section>
+        <section class="discover">
+           <h1>Discover Airbnb Experiences</h1>
+           <div class="inside-discover">
+            <div class="discover-card">
+                <p>Things to do
+                    on your trip</p>
+                    <button>Experiences</button>
+            </div>
+            <div class="discover-card">
+                <p>Things to do
+                    from home</p>
+                    <button>Online Experiences</button>
+            </div>
+           </div>
+        </section>
+        <section class="gift-card">
+            <div class="gift-text">
+                 <p>Shop Airbnb
+                    gift cards</p>
+                    <button>Learn more</button>
+            </div>
+            <img src="images/Gift Cards.png" alt="">
+
+        </section>
+        <section class="question-host">
+          <h1>Questions
+            about
+            hosting?</h1>
+            <button>Ask a Superhost</button>
+        </section>
+        <section class="future-gateways">
+           <h1>Inspiration for future getaways</h1>
+           <ul class="future-destination">
+              <li>Destinations for arts & culture</li>
+              <li>Destinations for outdoor adventure</li>
+              <li>Mountain cabins</li>
+              <li>Beach destinations</li>
+              <li>Popular destinations</li>
+              <li>Unique Stays</li>
+           </ul>
+           <div class="future-location-container">
+            <div class="future-location">
+                <p>Phoenix</p>
+                <p>Arizona</p>
+             </div>
+             <div class="future-location">
+                <p>Hot Springs</p>
+                <p>Arkansas</p>
+             </div>
+             <div class="future-location">
+                <p>Los Angeles</p>
+                <p>California</p>
+             </div>
+             <div class="future-location">
+                <p>San Diego</p>
+                <p>California</p>
+             </div>
+             <div class="future-location">
+                <p>San Francisco</p>
+                <p>California</p>
+             </div>
+             <div class="future-location">
+                <p>Barcelona</p>
+                <p>Catalonia</p>
+             </div>
+             <div class="future-location">
+                <p>Prague</p>
+                <p>Czechia</p>
+             </div>
+             <div class="future-location">
+                <p>Washington</p>
+                <p>District of Columbia</p>
+             </div>
+             <div class="future-location">
+                <p>Keswick</p>
+                <p>England</p>
+             </div>
+             <div class="future-location">
+                <p>London</p>
+                <p>England</p>
+             </div>
+             <div class="future-location">
+                <p>Scarborough</p>
+                <p>England</p>
+             </div>
+             <div class="future-location">
+                <p>Show more</p>
+             </div>
+           </div>
+
+        </section>
+       
+    </main>
+    <footer>
+        <div class="footer-div">
+            <ul>
+                <p>Support</p>
+                <li>Help Center</li>
+                <li>Safety information</li>
+                <li>Cancellation options</li>
+                <li>Our COVID-19 Response</li>
+                <li>Supporting people with disabilities</li>
+                <li>Report a neighborhoood concern</li>
+            </ul>
+            <ul>
+                <p>Community</p>
+                <li>Airbnb.org: disaster relief housing</li>
+                <li>Support: Afghan refugees</li>
+                <li>Celebrating diversity & belonging</li>
+                <li>Combating discriminatino</li>
+            </ul>
+            <ul>
+                <p>Hosting</p>
+                <li>Try hosting</li>
+                <li>AirCover: protection for Hosts</li>
+                <li>Explore hosting resources</li>
+                <li>Visit our community forum</li>
+                <li>How to host responsibly</li>
+            </ul>
+            <ul>
+                <p>About</p>
+                <li>Newsroom</li>
+                <li>Learn about new features</li>
+                <li>Letter from our founders</li>
+                <li>Careers</li>
+                <li>Investors</li>
+                <li>Airbnb Luxe</li>
+            </ul>
+        </div>
+        <div class="sponser">
+            <img src="images/Kicker.png" alt="">
+            
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
